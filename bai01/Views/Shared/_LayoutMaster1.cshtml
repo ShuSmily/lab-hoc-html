@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cửa hàng trái cây tươi sạch FreshFruit" />
+    <title>@(ViewBag.Title != null ? ViewBag.Title + " - FreshFruit" : "Trang chủ - FreshFruit")</title>
+
+    <!-- Font Awesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Syne+Tactile&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NỀN TOÀN TRANG: Xanh lá cây nhạt dịu mát */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #edf7f0;
+            color: #1e392a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fm-menu {
+        }
+
+        #Menu {
+            text-align: center;
+        }
+        /* Header / Thanh trên cùng */
+        #top-banner {
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(46, 125, 50, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .brand-name {
+            font-family: "Syne Tactile", cursive;
+            font-size: 28px;
+            color: #2e7d32;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #d8eedf;
+            padding: 8px 18px;
+            border-radius: 30px;
+            color: #1b5e20;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+            .contact-section i {
+                font-size: 14px;
+            }
+
+        /* Vùng nội dung chính */
+        #main-content {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 0 24px;
+        }
+
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid #d2ebd9;
+            box-shadow: 0 6px 16px rgba(46, 125, 50, 0.05);
+            min-height: 400px;
+        }
+
+        /* Chân trang (Footer) */
+        #footer {
+            background-color: #1b4332;
+            color: #e8f5e9;
+            text-align: center;
+            padding: 20px 24px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header id="top-banner">
+        <div class="header-container">
+            <div class="brand-section">
+                <img class="brand-logo" src="~/images/logo-a.png" alt="Logo FreshFruit" />
+                <h1 class="brand-name">FreshFruit</h1>
+            </div>
+            <div id="Menu">
+                <a href="~/Views/TrangChu/Index.cshtml" class="fm-menu"></a>
+                <a href="~/Views/TrangChu/Products.cshtml" class="fm-menu"></a>
+            </div>
+
+            <div class="contact-section">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>0983 457 6123</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div id="left-content">
+            @RenderBody()
+        </div>
+        <div id="right-content">
+            <
+        </div>
+        <div class="content-card">
+
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2026 FreshFruit. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

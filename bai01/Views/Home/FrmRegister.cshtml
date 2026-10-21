@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "FrmRegister";
+    Layout = "~/Views/Shared/_LayoutMaster1.cshtml";
+}
+<link href="~/Content/myStyle/register-style.css" rel="stylesheet" />
+<style>
+    .fm-lbl{
+        font-weight:bold;
+    }
+    #block1,#block2,#block3,#block4,#block5,#block6{
+        width:100px;
+        height:100px;
+        /*margin:10px;*/
+        display:inline-block;
+    }
+    #block1{
+        background-color:yellow;
+        position:relative;
+        top:10px;
+        left:10px;
+    }
+    #block2 {
+        background-color:red;
+        position:absolute;
+        top:10px;
+        left:283px;
+    }
+    #block3 {
+        background-color:green;
+    }
+    #block4 {
+        background-color: blueviolet;
+    }
+
+    #block5 {
+        background-color: chartreuse;
+    }
+
+    #block6 {
+        background-color: pink;
+    }
+    #container{
+        display:grid;
+       /* grid-template-columns:repeat(3,200px) ;*/
+        grid-template-columns:1fr 2fr 1fr;
+        position:relative;
+        grid-gap:20px;
+        z-index:9999;
+    }
+    .brand-logo{
+        position:fixed;
+        top:100px;
+        left:100px;
+    }
+</style>
+
+<div id="container">
+    <div id="block1">Block 1</div>
+    <div id="block2">Block 2</div>
+    <div id="block3">Block 3</div>
+    <div id="block4">Block 4</div>
+    <div id="block5">Block 5</div>
+    <div id="block6">Block 6</div>
+</div>
+
+<h2>Register Form</h2>
+<form action="#" method="post" autocomplete="on">
+    <table>
+        <tr>
+            <td colspan="2">
+                <input type="text" value="001122" readonly disabled />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <lable for="Name" style="font-weight:bold">Input Name</lable>
+            </td>
+            <td>
+                <input placeholder="Name..." type="text" name="Name" maxlength="20" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <lable for="Password" class="fm-lbl">Input Password</lable>
+            </td>
+            <td>
+
+                <input type="password" name="Password" maxlength="20" required />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Email">Input Email</label>
+            </td>
+            <td>
+                <input type="email" name="email" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Age">Input Age</label>
+            </td>
+            <td>
+                <input type="number" name="Age" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="BirthDay">Input BirthDay: </label>
+            </td>
+            <td>
+                <input type="date" name="BirthDay" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for=" Gender">Choose</label>
+            </td>
+            <td>
+                <input type="radio" name="Gender" />
+                <label for="Gender">Male</label>
+
+                <input type="radio" name="Gender" />
+                <label for="Gender">Female</label>
+                <input type="radio" name="Gender" />
+                <label for="Gender">Other</label>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Hobbies">Choose Hobbies : </label>
+            </td>
+            <td>
+                <input type="checkbox" name="Hobbies" />
+                <label for="Hobbies">Reading book</label>
+
+                <input type="checkbox" name="Hobbies" />
+                <label for="Hobbies">Watching TV</label>
+
+                <input type="checkbox" name="Hobbies" />
+                <label for="Hobbies">Walking</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="File">Choose Files</label>
+
+            </td>
+            <td>
+                <input type="file" name="File" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Note">Please give note : </label>
+
+            </td>
+            <td>
+                <textarea rows="10" cols="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Submit" id="fm-btn-submit" />
+                <input type="reset" value="Clear" />
+            </td>
+        </tr>
+    </table>
+</form>

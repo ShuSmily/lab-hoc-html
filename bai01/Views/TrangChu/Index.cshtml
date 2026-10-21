@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster1.cshtml";
+}
+
+<h2>Index</h2>
+<p>This is a paragraph</p>
+<p>This is a paragraph</p>
+<p>This is a paragraph</p>
+<p>This is a paragraph</p>
+<p>This is a paragraph</p>
+<p>This is a paragraph</p>
+
+<pre>
+    Line 1: HEllo
+    Line 2 : This text keeps its format
+</pre>
+
+<p>Price: <del>50$ </del> Giảm <mark>10$</mark> còn 
+    <span style="color:red;font-weight:bold;font-size:30px">
+        <ins>40$</ins>
+    </span>
+</p>
+<p>The <abbr title="World Health Organization"> WHO </abbr></p>
+
+<blockquote cite="https://google.com">Learning HTML is the first step to mastering wed development </blockquote>
+<a href="https://www.google.com/" target="_blank">Google</a>
+@*Tạo link mở home about*@
+<a href="~/Home/About" target="_blank">Home About</a>
+<a href="~/TrangChu/Products.cshtml" target="_blank">Products</a>
+<video width="400" height="400" controls>
+    <source src="https://res.cloudinary.com/ceag2ksu/video/upload/v1790148865/Cinematic_slow_motion_close_up.mp4" />
+</video>
+
+<audio controls>
+
+</audio>
+
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+
+<ol start="4">
+    <li>HTML 2</li>
+    <li>CSS 2</li>
+    <li>JavaScript 2</li>
+</ol>
+
+<ol style="list-style-type:lower-alpha">
+    <li>HTML 2</li>
+    <li>CSS 2</li>
+    <li>JavaScript 2</li>
+</ol>
+
+<ul style="list-style-type:square">
+    <li>HTML 2</li>
+    <li>CSS 2</li>
+    <li>JavaScript 2</li>
+</ul>
+<dl>
+    <dt>HTML</dt>
+    <dd>
+        Hyper text Markup Language
+    </dd>
+    <dt>CSS</dt>
+    <dd>
+        Cascading Style Sheets
+    </dd>
+</dl>
+<table border="1" width="300">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Peter</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>Mary</td>
+        <td>5</td>
+    </tr>
+</table>
+<table border="1" width="400">
+    <tr>
+        <td rowspan="2">Region</td>
+        <td>Sale Q1</td>
+        <td>Sale Q2</td>
+    </tr>
+
+    <tr>
+        @*<td></td>*@
+        <td>5000</td>
+        <td>7000</td>
+    </tr>
+</table>
+<table border="1" width="400">
+    <colgroup>
+        <col style="background-color:yellow" />
+        <col style="background-color:greenyellow" />
+        <col style="background-color:deepskyblue" />
+    </colgroup>
+    <captiom>Table Sales</captiom>
+    <tr>
+        <th rowspan="4">Region</th>
+        <th colspan="2">Sale</th>
+    </tr>
+    <tr>
+        <th>Q1</th>
+        <th>Q2</th>
+    </tr>
+
+    <tr>
+        <td>4000</td>
+        <td>5000</td>
+    </tr>
+    <tr>
+        <td>7000</td>
+        <td>3000</td>
+    </tr>
+    
+</table>
+<table border="1" width="400">
+    <thead>
+        <tr>
+            <th>Items</th>
+            <th>Prices</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr>
+            <td>Item 1</td>
+            <td>10$</td>
+        </tr>
+        <tr>
+            <td>Item 2</td>
+            <td>60$</td>
+        </tr>
+        <tr>
+            <td>item 3</td>
+            <td>40$</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Totals</td>
+        </tr>
+     </tfoot>
+</table>
